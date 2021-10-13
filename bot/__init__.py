@@ -12,6 +12,12 @@ API_HASH = get_config("API_HASH", should_prompt=True)
 APP_ID = get_config("APP_ID", should_prompt=True)
 # get a token from @BotFather
 TG_BOT_TOKEN = get_config("TG_BOT_TOKEN", should_prompt=True)
+CH_EMOJI = get_config("CH_EMOJI", should_prompt=True)
+OWN_EMOJI = get_config("OWN_EMOJI", should_prompt=True)
+CREATOR_USERNAME = get_config("CREATOR_USERNAME", should_prompt=True)
+UPDATES_CH = get_config("UPDATES_CH", should_prompt=True)
+UPDATES_MODE = get_config("UPDATES_MODE", should_prompt=True)
+CREATOR_MODE = get_config("CREATOR_MODE", should_prompt=True)
 
 # Number of update workers to use.
 # 4 is the recommended (and default) amount,
