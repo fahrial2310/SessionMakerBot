@@ -1,21 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# (c) Shrimadhav U K
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-""" credentials """
-
 import logging
 from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
@@ -82,21 +64,21 @@ AVAILABLE_CODE_RECVING_OPTIONS = {
 START_OTHER_USERS_TEXT = get_config(
     "START_OTHER_USERS_TEXT",
     (
-        "Subscribe @DamienSoukara If You 💜 This Bot\n\n"
+        "Subscribe @Alvin_Image_Editor If You Support This Bot\n\n"
     )
 )
 INPUT_PHONE_NUMBER = get_config("INPUT_PHONE_NUMBER", (
-    "⭕ Enter The Phone Number That You Want To Make Awesome."
+    "☠️ Enter The Phone Number That You Want To Make Session."
 ))
 RECVD_PHONE_NUMBER_DBP = get_config("RECVD_PHONE_NUMBER_DBP", (
-    "🔴 Checking Received Phone Number \n\n"
-    "🟣 The Process Takes a Long Time,\n"
-    "🔵 Please Be Patient,\n\n"
+    "☠️ Checking Received Phone Number \n\n"
+    "☠️ The Process Takes a Long Time,\n"
+    "☠️ Please Be Patient,\n\n"
     "<b>Never Submit Again</b> \n"
     "<b><i><u>It'll Ruin The System</u></i></b>"
 ))
 ALREADY_REGISTERED_PHONE = get_config("ALREADY_REGISTERED_PHONE", (
-    "⭕ This Number Is Registered On Telegram. "
+    "☠️ This Number Is Registered On Telegram. "
     "Please Input The Verification Code That You Receive "
     "From <a href='tg://user?id=777000'>Telegram</a> "
     "Seperated By Space, \n\n <b>🤫 Example :</b> ✅ 1 7 0 2 9 - ❌ 17029\n\n"
@@ -106,9 +88,9 @@ CONFIRM_SENT_VIA = get_config("CONFIRM_SENT_VIA", (
     "✅ The Confirmation Code Has Been Sent Via {}"
 ))
 RECVD_PHONE_CODE = get_config("RECVD_PHONE_CODE", (
-    "🔴 Checking Received Phone Code \n\n"
-    "🟣 The Process Takes a Long Time,\n"
-    "🔵 Please Be Patient,\n\n"
+    "☠️ Checking Received Phone Code \n\n"
+    "☠️ The Process Takes a Long Time,\n"
+    "☠️ Please Be Patient,\n\n"
     "<b>Never Submit Again</b> \n"
     "<b><i><u>It'll Ruin The System</u></i></b>"
 ))
@@ -117,11 +99,11 @@ NOT_REGISTERED_PHONE = get_config("NOT_REGISTERED_PHONE", (
 ))
 PHONE_CODE_IN_VALID_ERR_TEXT = get_config(
     "PHONE_CODE_IN_VALID_ERR_TEXT",
-    "🤦‍♂️ Invalid Code Received. Please Re /help"
+    "☠️ Invalid Code Received. Please Re /help"
 )
 TFA_CODE_IN_VALID_ERR_TEXT = get_config(
     "TFA_CODE_IN_VALID_ERR_TEXT",
-    "🤦‍♂️ Invalid Two Factor Code Received. Please Re /help"
+    "Invalid Two Factor Code Received. Please Re /help"
 )
 ACC_PROK_WITH_TFA = get_config("ACC_PROK_WITH_TFA", (
     "The entered Telegram Number is protected with 2FA. "
@@ -129,9 +111,9 @@ ACC_PROK_WITH_TFA = get_config("ACC_PROK_WITH_TFA", (
     "<i>This message will only be used for generating your "
     "string session, and will never be used for any other purposes "
     "than for which it is asked.</i>\n\n"
-    "©️ : @DamienSoukara"
+    "☠️ : @Alvin_Image_Editor"
 ))
 SESSION_GENERATED_USING = get_config("SESSION_GENERATED_USING", (
     "👆 String Session Successfully Generated\n\n"
-    "©️ : @DamienSoukara \n💜 Thank You For Using Me "
+    "☠️ : @Alvin_Image_Editor \n☠️ Thank You For Using Me "
 ))
