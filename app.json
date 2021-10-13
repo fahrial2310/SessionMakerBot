@@ -1,6 +1,7 @@
 {
     "name": "Pyrogram String Session Generator Bot",
     "description": "Modular  Telegram Bot powered by @PyroGram!",
+    "logo": "https://telegra.ph/file/1014cfb47e131f3bc2bc9.jpg",
     "keywords": [
         "telegram",
         "bot",
@@ -8,18 +9,65 @@
         "modular",
         "productivity"
     ],
-    "repository": "https://github.com/AmineSoukara/SessionMakerBot",
-    "website": "https://telegram.dog/DamienSoukara",
-    "success_url": "https://t.me/DamienSoukara/5",
+    "repository": "https://github.com/fahrial2310/PyrogramSessionMaker",
     "env": {
         "APP_ID": {
-            "description": "Get this value from my.telegram.org! Please do not steal"
+            "description": "Get this value from my.telegram.org! Please do not steal",
+            "required": true,
+            "value": "123456"
         },
         "API_HASH": {
-            "description": "Get this value from my.telegram.org! Please do not steal"
+            "description": "Get this value from my.telegram.org! Please do not steal",
+            "required": true
         },
         "TG_BOT_TOKEN": {
-            "description": "Obtain a Telegram bot token by contacting @BotFather"
+            "description": "Obtain a Telegram bot token by contacting @BotFather",
+            "required": true
+        },
+        "CH_EMOJI": {
+            "description": "use emoji for your updates button",
+            "required": false,
+            "value": "🔔"
+        },
+        "GRP_EMOJI": {
+            "description": "use emoji for your support button",
+            "required": false,
+            "value": "📣"
+        },
+        "OWN_EMOJI": {
+            "description": "use emoji for your owner/creator button",
+            "required": false,
+            "value": "☠️"
+        },
+        "CREATOR_USERNAME": {
+            "description": "your username without @",
+            "required": true,
+            "value": "Alvin_Junior"
+        },
+        "CREATOR_MODE": {
+            "description": "use Creator or Owner",
+            "required": false,
+            "value": "Creator"
+        },
+        "UPDATES_CH": {
+            "description": "your channel username without @",
+            "required": false,
+            "value": "Alvin_Image_Editor"
+        },
+        "UPDATES_MODE": {
+            "description": "use Channel/Updates/Channel Updates",
+            "required": false,
+            "value": "Updates"
+        },
+        "SUPPORT_GRP": {
+            "description": "your support username without @",
+            "required": false,
+            "value": "Alvin_Image_Editor_Group"
+        },
+        "SUPPORT_MODE": {
+            "description": "use Support/Group/Support Group/Support Chat",
+            "required": false,
+            "value": "Support"           
         }
     },
     "buildpacks": [{
