@@ -1,20 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# (c) Shrimadhav U K
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
 from pyrogram import (
     Client,
     filters
@@ -29,7 +12,14 @@ from bot import (
     COMMM_AND_PRE_FIX,
     START_COMMAND,
     START_OTHER_USERS_TEXT,
-    INPUT_PHONE_NUMBER
+    INPUT_PHONE_NUMBER,
+    CH_EMOJI as emoj,
+    OWN_EMOJI as emo,
+    GRP_EMOJI as em,
+    CREATOR_USERNAME,
+    UPDATES_CH,
+    CREATOR_MODE,
+    UPDATES_MODE    
 )
 
 
@@ -49,15 +39,16 @@ async def num_start_message(_, message: Message):
 @Client.on_message(filters.private & filters.command('start'))
 def _start(client, message):
     chatID = message.chat.id
-    photoUrl = "https://telegra.ph/file/d639f16bbc944cce15adf.jpg"
+    photoUrl = "https://telegra.ph/file/1014cfb47e131f3bc2bc9.jpg"
     client.send_photo(chatID, photoUrl, 
     parse_mode = "markdown", 
     caption = "**Pyrogram String Session Maker**\nPlease Read : /help", 
     reply_to_message_id = message.message_id, 
     reply_markup = InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("👑 Creator", url=f"t.me/AmineSoukara"),
-                    InlineKeyboardButton("💬 Channel", url="t.me/DamienSoukara")],
-                    [InlineKeyboardButton("⭕ Deploy DAMIEN-X ⭕", url="https://bit.ly/DamienDeploy")
+                    [[InlineKeyboardButton(f"{emo} {CREATOR_MODE}", url=f"t.me/{CREATOR_USERNAME}")],
+                    [InlineKeyboardButton(f"{emoj} {UPDATES_MODE}", url=f"t.me/{UPDATES_CH}"),
+                     InlineKeyboardButton(f"{em} {SUPPORT_GRP}", url=f"t.me/{SUPPORT_GRP}")],
+                    [InlineKeyboardButton("☠️ Repo PyrogramBot ☠️", url="https://github.com/fahrial2310/PyrogramSessionMaker")
                     ]]
                 )
             )
