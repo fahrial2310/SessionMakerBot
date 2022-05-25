@@ -23,11 +23,13 @@ from bot import (
     SUPPORT_GRP,
     SUPPORT_MODE      
 )
+from __init__ import Var, TXT
+
 Bot = Client(
       "SessionMakerBot"
-      api_hash=API_HASH, 
-      api_id=APP_ID, 
-      bot_token=TG_BOT_TOKEN,
+      api_hash=Var.API_HASH, 
+      api_id=Var.APP_ID, 
+      bot_token=Var.TG_BOT_TOKEN,
 )
 
 @Client.on_message(
