@@ -23,7 +23,7 @@ from bot import (
     SUPPORT_GRP,
     SUPPORT_MODE      
 )
-from __init__ import Var, TXT
+from bot.__init__ import Var, TXT
 
 Bot = Client(
       "SessionMakerBot"
