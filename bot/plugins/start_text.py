@@ -23,7 +23,12 @@ from bot import (
     SUPPORT_GRP,
     SUPPORT_MODE      
 )
-
+Bot = Client(
+      "SessionMakerBot"
+      api_hash=API_HASH, 
+      api_id=APP_ID, 
+      bot_token=TG_BOT_TOKEN,
+)
 
 @Client.on_message(
     filters.command(START_COMMAND, COMMM_AND_PRE_FIX) &
@@ -37,7 +42,7 @@ async def num_start_message(_, message: Message):
     AKTIFPERINTAH[message.chat.id]["START"] = status_message
     raise message.stop_propagation()
 
-@Img.on_callback_query()
+@Bot.on_callback_query()
 async def cdata(c, q):
     chat_id = q.from_user.id 
     data = q.data
