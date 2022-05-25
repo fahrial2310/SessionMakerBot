@@ -70,6 +70,7 @@ AVAILABLE_CODE_RECVING_OPTIONS = {
     "call": "Phone Call",
     "flash_call": "Phone Flash Call"
 }
+class TXT(object):
 # /start message when other users start your bot
 START_OTHER_USERS_TEXT = get_config(
     "START_OTHER_USERS_TEXT",
