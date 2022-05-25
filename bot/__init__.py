@@ -6,6 +6,7 @@ from bot.get_config import get_config
 # apparently, no error appears even if the path does not exists
 load_dotenv("config.env")
 
+class Var(object):
 # The Telegram API things
 # Get these values from my.telegram.org or Telegram: @useTGxBot
 API_HASH = get_config("API_HASH", should_prompt=True)
