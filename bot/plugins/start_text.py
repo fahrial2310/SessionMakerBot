@@ -37,6 +37,14 @@ async def num_start_message(_, message: Message):
     AKTIFPERINTAH[message.chat.id]["START"] = status_message
     raise message.stop_propagation()
 
+@Img.on_callback_query()
+async def cdata(c, q):
+    chat_id = q.from_user.id 
+    data = q.data
+    if data == "help":
+    await q.answer(wait)
+    await q.message.edit_text( text=Tr.START_OTHER_USER_TEXT + "\n" + INPUT_PHONE_NUMBER,  
+    disable_web_page_preview=True )
 
 @Client.on_message(filters.private & filters.command('start'))
 def _start(client, message):
@@ -49,6 +57,7 @@ def _start(client, message):
     reply_markup = InlineKeyboardMarkup(
                     [[InlineKeyboardButton(f"{emo} {CREATOR_MODE}", url=f"t.me/{CREATOR_USERNAME}")],
                     [InlineKeyboardButton(f"{emoj} {UPDATES_MODE}", url=f"t.me/{UPDATES_CH}"),
+                     InlineKeyboardButton(" Help ", callback_data ="help"),
                      InlineKeyboardButton(f"{em} {SUPPORT_MODE}", url=f"t.me/{SUPPORT_GRP}")],
                     [InlineKeyboardButton("☠️ Repo PyrogramBot ☠️", url="https://github.com/fahrial2310/PyrogramSessionMaker")
                     ]]
