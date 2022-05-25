@@ -49,6 +49,7 @@ def _start(client, message):
     reply_markup = InlineKeyboardMarkup(
                     [[InlineKeyboardButton(f"{emo} {CREATOR_MODE}", url=f"t.me/{CREATOR_USERNAME}")],
                     [InlineKeyboardButton(f"{emoj} {UPDATES_MODE}", url=f"t.me/{UPDATES_CH}"),
+                     InlineKeyboardButton(" Help ", callback_data =f"START_COMMAND"),
                      InlineKeyboardButton(f"{em} {SUPPORT_MODE}", url=f"t.me/{SUPPORT_GRP}")],
                     [InlineKeyboardButton("☠️ Repo PyrogramBot ☠️", url="https://github.com/fahrial2310/PyrogramSessionMaker")
                     ]]
