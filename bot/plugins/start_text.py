@@ -20,8 +20,8 @@ from bot import (
     UPDATES_CH,
     CREATOR_MODE,
     UPDATES_MODE,
-    SUPPORT_GRP
-        
+    SUPPORT_GRP,
+    SUPPORT_MODE      
 )
 
 
@@ -49,7 +49,7 @@ def _start(client, message):
     reply_markup = InlineKeyboardMarkup(
                     [[InlineKeyboardButton(f"{emo} {CREATOR_MODE}", url=f"t.me/{CREATOR_USERNAME}")],
                     [InlineKeyboardButton(f"{emoj} {UPDATES_MODE}", url=f"t.me/{UPDATES_CH}"),
-                     InlineKeyboardButton(f"{em} {SUPPORT_GRP}", url=f"t.me/{SUPPORT_GRP}")],
+                     InlineKeyboardButton(f"{em} {SUPPORT_MODE}", url=f"t.me/{SUPPORT_GRP}")],
                     [InlineKeyboardButton("☠️ Repo PyrogramBot ☠️", url="https://github.com/fahrial2310/PyrogramSessionMaker")
                     ]]
                 )
